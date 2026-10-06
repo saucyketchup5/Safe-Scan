@@ -3499,3 +3499,42 @@ body.risk-modal-open {
         padding-bottom: 40px;
     }
 }
+
+/* =========================================================
+   MOBILE RISK POPUP — KEEP THE POPUP ABOVE THE SITE HEADER
+   The mobile header must not cover the top of the risk dialog.
+   ========================================================= */
+@media (max-width: 700px) {
+    .risk-modal {
+        z-index: 2000;
+        top: 0;
+        bottom: 0;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        align-items: flex-start;
+    }
+
+    .risk-modal-dialog {
+        position: relative;
+        z-index: 2001;
+        height: calc(100vh - 12px);
+        max-height: calc(100vh - 12px);
+        margin-top: 0;
+    }
+
+    /* Keep the close button above the dialog content while scrolling. */
+    .risk-modal-close {
+        z-index: 2002;
+    }
+}
+
+@media (max-width: 420px) {
+    .risk-modal {
+        padding: 4px 5px;
+    }
+
+    .risk-modal-dialog {
+        height: calc(100vh - 8px);
+        max-height: calc(100vh - 8px);
+    }
+}
