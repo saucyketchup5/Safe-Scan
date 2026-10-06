@@ -3560,3 +3560,62 @@ body.risk-modal-open {
         z-index: 100000 !important;
     }
 }
+
+/* =========================================================
+   FINAL MOBILE RISK POPUP — KEEP THE LAST CONTENT REACHABLE
+   Use the dynamic viewport on mobile browsers so the dialog does
+   not extend underneath the browser/system controls. Add extra
+   bottom scroll room so the final safety text can always be read.
+   ========================================================= */
+@media (max-width: 700px) {
+    .risk-modal {
+        height: 100dvh;
+        min-height: 0;
+        max-height: 100dvh;
+        box-sizing: border-box;
+        padding-bottom: 6px;
+    }
+
+    .risk-modal-dialog {
+        height: calc(100dvh - 12px);
+        max-height: calc(100dvh - 12px);
+        min-height: 0;
+        box-sizing: border-box;
+        scroll-padding-bottom: 80px;
+    }
+
+    .risk-modal-content {
+        padding-bottom: 80px !important;
+    }
+
+    #unsafeContentModal .risk-modal-content,
+    #unsafeMeetingsModal .risk-modal-content {
+        padding-bottom: 90px !important;
+    }
+
+    .risk-modal-safety {
+        margin-bottom: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .risk-modal {
+        height: 100dvh;
+        max-height: 100dvh;
+    }
+
+    .risk-modal-dialog {
+        height: calc(100dvh - 8px);
+        max-height: calc(100dvh - 8px);
+        scroll-padding-bottom: 90px;
+    }
+
+    .risk-modal-content {
+        padding-bottom: 90px !important;
+    }
+
+    #unsafeContentModal .risk-modal-content,
+    #unsafeMeetingsModal .risk-modal-content {
+        padding-bottom: 100px !important;
+    }
+}
