@@ -1,1 +1,1 @@
-# Safe-Scan
+# SafeScan
