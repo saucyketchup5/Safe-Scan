@@ -3538,3 +3538,25 @@ body.risk-modal-open {
         max-height: calc(100vh - 8px);
     }
 }
+
+/* =========================================================
+   MOBILE RISK POPUP — HIDE SITE HEADER WHILE OPEN
+   The phone's browser controls cannot be hidden by a webpage,
+   but the SafeScan site header/navigation is completely placed
+   behind the risk popup while a risk is open.
+   ========================================================= */
+@media (max-width: 700px) {
+    body.risk-modal-open .header {
+        z-index: -1 !important;
+        pointer-events: none !important;
+        visibility: hidden !important;
+    }
+
+    body.risk-modal-open .risk-modal {
+        z-index: 99999 !important;
+    }
+
+    body.risk-modal-open .risk-modal-dialog {
+        z-index: 100000 !important;
+    }
+}
