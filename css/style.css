@@ -3627,39 +3627,41 @@ body.risk-modal-open {
    the final safety card while still allowing the popup to scroll.
    ========================================================= */
 @media (max-width: 700px) {
+    /* Keep the popup comfortably above the phone system bar without
+       leaving a large empty area underneath the final safety card. */
     .risk-modal-dialog {
-        height: calc(100dvh - 76px) !important;
-        max-height: calc(100dvh - 76px) !important;
-        margin-bottom: 76px !important;
-    }
-
-    .risk-modal-content {
-        padding-bottom: 150px !important;
-    }
-
-    #unsafeContentModal .risk-modal-content,
-    #unsafeMeetingsModal .risk-modal-content {
-        padding-bottom: 160px !important;
-    }
-
-    .risk-modal-safety {
-        margin-bottom: 28px !important;
-    }
-}
-
-@media (max-width: 420px) {
-    .risk-modal-dialog {
-        height: calc(100dvh - 70px) !important;
+        height: auto !important;
         max-height: calc(100dvh - 70px) !important;
         margin-bottom: 70px !important;
     }
 
     .risk-modal-content {
-        padding-bottom: 170px !important;
+        padding-bottom: 48px !important;
     }
 
     #unsafeContentModal .risk-modal-content,
     #unsafeMeetingsModal .risk-modal-content {
-        padding-bottom: 180px !important;
+        padding-bottom: 56px !important;
+    }
+
+    .risk-modal-safety {
+        margin-bottom: 18px !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .risk-modal-dialog {
+        height: auto !important;
+        max-height: calc(100dvh - 64px) !important;
+        margin-bottom: 64px !important;
+    }
+
+    .risk-modal-content {
+        padding-bottom: 44px !important;
+    }
+
+    #unsafeContentModal .risk-modal-content,
+    #unsafeMeetingsModal .risk-modal-content {
+        padding-bottom: 52px !important;
     }
 }
