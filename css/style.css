@@ -3404,15 +3404,19 @@ body.risk-modal-open {
         --safe-scan-header-height: 82px;
     }
 
+    /* On phones the mobile menu is closed before a risk opens, so the popup
+       can sit near the top of the screen instead of being pushed down by
+       the navigation/header height. This gives the popup more visible space. */
     .risk-modal {
-        padding-top: calc(var(--safe-scan-header-height) + 8px);
+        padding-top: 6px;
         padding-left: 8px;
         padding-right: 8px;
-        padding-bottom: 8px;
+        padding-bottom: 6px;
+        align-items: flex-start;
     }
 
     .risk-modal-dialog {
-        max-height: calc(100vh - var(--safe-scan-header-height) - 16px);
+        max-height: calc(100vh - 12px);
         width: 100%;
     }
 }
@@ -3423,14 +3427,14 @@ body.risk-modal-open {
     }
 
     .risk-modal {
-        padding-top: calc(var(--safe-scan-header-height) + 6px);
+        padding-top: 4px;
         padding-left: 5px;
         padding-right: 5px;
-        padding-bottom: 6px;
+        padding-bottom: 4px;
     }
 
     .risk-modal-dialog {
-        max-height: calc(100vh - var(--safe-scan-header-height) - 12px);
+        max-height: calc(100vh - 8px);
     }
 }
 
