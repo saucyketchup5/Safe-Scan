@@ -3665,3 +3665,11 @@ body.risk-modal-open {
         padding-bottom: 52px !important;
     }
 }
+
+
+/* SAFE SCAN — RESOURCES TAB REMOVED: rebalance desktop navigation spacing */
+@media screen and (min-width: 981px) {
+    .header nav {
+        gap: 9px;
+    }
+}
